@@ -66,7 +66,7 @@ fun HomeScreen (modifier: Modifier = Modifier){
                 modifier = Modifier.padding(top = 60.dp)
                     .width(200.dp).height(70.dp)
             ) {
-                Text("Começar",
+                Text("Próximo",
                     fontSize = 30.sp,
                 )
 

@@ -63,6 +63,8 @@ fun SelectVehicleScreen (modifier: Modifier = Modifier){
                 mutableStateOf( -1)
             }
 
+        Column (){
+
 
             Row(verticalAlignment = Alignment.CenterVertically ,
             ) {
@@ -87,7 +89,7 @@ fun SelectVehicleScreen (modifier: Modifier = Modifier){
                     fontSize = 16.sp,
                     color = Color.White)
             }
-
+        }
             Spacer(modifier = modifier.height(50.dp))
 
             Image(painter = painterResource(R.drawable.saveplants),
