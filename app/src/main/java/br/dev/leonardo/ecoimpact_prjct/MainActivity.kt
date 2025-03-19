@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import br.dev.leonardo.ecoimpact_prjct.screens.HomeScreen
+import br.dev.leonardo.ecoimpact_prjct.screens.InfoScreen
 import br.dev.leonardo.ecoimpact_prjct.screens.InputScreen
 import br.dev.leonardo.ecoimpact_prjct.screens.SelectVehicleScreen
 import br.dev.leonardo.ecoimpact_prjct.ui.theme.EcoImpactprjctTheme
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            SelectVehicleScreen()
+            InfoScreen()
         }
     }
 }
