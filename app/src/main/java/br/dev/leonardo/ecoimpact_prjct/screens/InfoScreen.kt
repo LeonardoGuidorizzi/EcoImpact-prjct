@@ -25,10 +25,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import br.dev.leonardo.ecoimpact_prjct.R
 
 @Composable
-fun InfoScreen(modifier: Modifier = Modifier) {
+fun InfoScreen(navController: NavHostController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -45,7 +47,6 @@ fun InfoScreen(modifier: Modifier = Modifier) {
                 modifier = Modifier.padding(top = 60.dp)
             )
 
-            Spacer(modifier = modifier.height(20.dp))
 
             Text(
                 text = "Nosso aplicativo tem como objetivo conscientizar empresas " +
@@ -64,7 +65,7 @@ fun InfoScreen(modifier: Modifier = Modifier) {
                     .padding(horizontal = 24.dp, vertical = 16.dp)
             )
 
-            Spacer(modifier = modifier.height(15.dp))
+
 
             Image(painter = painterResource(R.drawable.saveplants),
                 contentDescription = "",
@@ -91,5 +92,6 @@ fun InfoScreen(modifier: Modifier = Modifier) {
 @Preview(showSystemUi = true)
 @Composable
 private fun InfoScreenPreview() {
-    InfoScreen()
+    val navController = rememberNavController()
+    InfoScreen(navController = navController)
 }

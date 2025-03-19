@@ -30,10 +30,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import br.dev.leonardo.ecoimpact_prjct.R
 
 @Composable
-fun SelectVehicleScreen (modifier: NavHostController = Modifier){
+fun SelectVehicleScreen (navController: NavHostController){
     Box (
         modifier = Modifier
             .background(color = Color(0xFF2196F3))
@@ -57,7 +58,7 @@ fun SelectVehicleScreen (modifier: NavHostController = Modifier){
                     .padding(top = 60.dp),
             )
 
-            Spacer(modifier = modifier.height(32.dp))
+
 
 
             var transporteSelecionado by remember {
@@ -91,13 +92,13 @@ fun SelectVehicleScreen (modifier: NavHostController = Modifier){
                     color = Color.White)
             }
         }
-            Spacer(modifier = modifier.height(50.dp))
+
 
             Image(painter = painterResource(R.drawable.saveplants),
                 contentDescription = "Imagem de mãos segurando uma árvore",
             )
 
-            Spacer(modifier = modifier.height(50.dp))
+
 
             Button(onClick = {},
                 modifier = Modifier.padding(horizontal = 30.dp).width(250.dp),
@@ -121,5 +122,6 @@ fun SelectVehicleScreen (modifier: NavHostController = Modifier){
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 private fun SelectVehiclePreview() {
-    SelectVehicleScreen()
+    val navController = rememberNavController()
+    SelectVehicleScreen(navController = navController)
 }

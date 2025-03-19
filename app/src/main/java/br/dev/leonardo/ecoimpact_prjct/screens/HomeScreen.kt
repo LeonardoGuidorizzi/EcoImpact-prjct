@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 
 
+
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -26,11 +27,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import br.dev.leonardo.ecoimpact_prjct.R
 
 @Composable
-fun HomeScreen (modifier: NavHostController = Modifier){
+fun HomeScreen (navController: NavHostController){
     Box (
         modifier =
         Modifier.background(color = Color(0xFF2196F3))
@@ -59,7 +62,7 @@ fun HomeScreen (modifier: NavHostController = Modifier){
                 modifier = Modifier
                     .padding(top = 60.dp),
             )
-            Button(onClick = {},
+            Button(onClick = {navController.navigate("selectVehicle")},
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xFF32BB37)
                 ),
@@ -80,5 +83,6 @@ fun HomeScreen (modifier: NavHostController = Modifier){
 @Preview(showSystemUi = true)
 @Composable
 private fun  HomeScreenPreview(){
-    HomeScreen()
+    val navController = rememberNavController()
+    HomeScreen(navController = navController)
 }
