@@ -29,10 +29,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import br.dev.leonardo.ecoimpact_prjct.R
 
 @Composable
-fun SelectVehicleScreen (modifier: Modifier = Modifier){
+fun SelectVehicleScreen (modifier: NavHostController = Modifier){
     Box (
         modifier = Modifier
             .background(color = Color(0xFF2196F3))
